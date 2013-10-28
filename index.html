@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="cpq">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>CPQ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="row navbar-wrapper navbar-default" role="navigation">
+        <form class="navbar-form navbar-left" role="search" ng-controller="googleAutoComplete">
+            <div class="form-group col-sm-3">
+                <div class="input-group">
+                    <input type="text" id="search-field" class="form-control input-sm search-query" placeholder="Search" ng-model="selected" typeahead="selected for selected in search($viewValue) | limitTo:8"/>
+                    <span class="input-group-addon btn btn-default"><span class="glyphicon glyphicon-search"></span></span>
+                </div>
+            </div>
+        </form>
+
+
+    </nav>
+
+    <div class="side-bar col-lg-2 col-sm-1">
+        <div bootstrap-accordion-id="accordion">
+            <div class="panel panel-default" accordion-group-id="collapseOne">
+                <div accordion-title> Refine Address </div>
+                <div accordion-content>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+            </div>
+            <div class="panel panel-default" accordion-group-id="collapseTwo">
+                <div accordion-title> Point of Interconnect </div>
+                <div accordion-content>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+            </div>
+            <div class="panel panel-default" accordion-group-id="collapseThree">
+            <div accordion-title> Refine Address </div>
+            <div accordion-content>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="map-canvas" ></div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.6.0.js"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/googleMapsService.js" type="text/javascript"></script>
+</body>
+</html>
